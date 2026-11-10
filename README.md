@@ -2,15 +2,13 @@
 
 An independent fintech infrastructure prototype for reviewing AI-generated banking responses with a local language model. The dashboard accepts a customer message and assistant response, scores the response against a fictional policy, and displays the verdict and recent audit history.
 
-## 60-second dashboard walkthrough
+## Dashboard demo
 
-![Illustrated audit walkthrough showing a card-freeze answer passing and a guaranteed savings rate being flagged](docs/audit-walkthrough.svg)
+[Watch or download the 28-second MP4](docs/audit-demo.mp4)
 
-The graphic illustrates expected outcomes using fictional data. Follow along in the local dashboard after setup.
+![Animated dashboard walkthrough showing a passing card-freeze answer and a flagged savings-rate claim](docs/audit-demo.gif)
 
-1. **0:00–0:15** Select **Card freeze** and click **Run audit**. The answer follows the demo policy and should pass.
-2. **0:15–0:35** Select **Contradicted savings rate** and click **Run audit**. The reply guarantees 24.5% APY, while the fictional policy specifies a variable 3.00% APY. Expect **Flagged** and **Contradicted claim: Yes**.
-3. **0:35–1:00** Compare the two verdicts in **Session audit history**. If the model is unavailable or returns an invalid verdict, the dashboard shows **Needs review**.
+This animated walkthrough uses illustrative verdicts and fictional banking data. It shows how to run a card-freeze audit, flag a guaranteed 24.5% APY claim against the demo policy, and compare both outcomes in session history.
 
 ## Run locally
 
