@@ -2,6 +2,16 @@
 
 An independent fintech infrastructure prototype for reviewing AI-generated banking responses with a local language model. The dashboard accepts a customer message and assistant response, scores the response against a fictional policy, and displays the verdict and recent audit history.
 
+## 60-second dashboard walkthrough
+
+![Illustrated audit walkthrough showing a card-freeze answer passing and a guaranteed savings rate being flagged](docs/audit-walkthrough.svg)
+
+The graphic illustrates expected outcomes using fictional data. Follow along in the local dashboard after setup.
+
+1. **0:00–0:15** Select **Card freeze** and click **Run audit**. The answer follows the demo policy and should pass.
+2. **0:15–0:35** Select **Contradicted savings rate** and click **Run audit**. The reply guarantees 24.5% APY, while the fictional policy specifies a variable 3.00% APY. Expect **Flagged** and **Contradicted claim: Yes**.
+3. **0:35–1:00** Compare the two verdicts in **Session audit history**. If the model is unavailable or returns an invalid verdict, the dashboard shows **Needs review**.
+
 ## Run locally
 
 Install Python 3.10+ and [Ollama](https://ollama.com/download). Disable Ollama cloud features for local-only operation and restart Ollama after changing the setting. See the [Ollama FAQ](https://docs.ollama.com/faq).
